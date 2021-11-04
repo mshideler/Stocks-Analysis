@@ -106,9 +106,9 @@ After refactoring, the VBA code used fewer variables and more arrays (see code b
 
 Also included in both versions of the analysis code was a timer to show how long it took to execute the code.  
 
-| Green_Stocks | VBA_Challenge |
-|------------------------------|
-|!(https://github.com/mshideler/Stocks-Analysis/tree/main/Resources/Green_Stock_2017.png) | |
+### Green Stocks
+
+![Green Stocks 2017](https://github.com/mshideler/Stocks-Analysis/tree/main/Resources/Green_Stock_2017.png)
 
 ## Summary
 
