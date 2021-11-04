@@ -108,7 +108,7 @@ Also included in both versions of the analysis code was a timer to show how long
 
 ### Green Stocks
 
-![Green Stocks 2017](https://github.com/mshideler/Stocks-Analysis/tree/main/Resources/Green_Stock_2017.png)
+![Green Stocks 2017](https://github.com/mshideler/Stocks-Analysis/blob/main/Resources/VBA_Challenge_2017.png)
 
 ## Summary
 
