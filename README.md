@@ -15,12 +15,52 @@ In most cases, performance for the green energy stocks evaluated here was great 
 Pic – Stock Performance
 
 The VBA code used in the analysis macro initially focused on using loops and conditionals to save values to variables to output at the end (see code below).
-
-Example Code 1
+```
+    For i = 0 To 11
+        
+        ticker = tickers(i)
+        totalVolume = 0
+        
+        '5) Loop through rows in the data.
+        Sheets(yearValue).Activate
+        
+        For j = 2 To RowCount
+        
+            '5a) Find the total volume for the current ticker.
+            If Cells(j, 1).Value = ticker Then
+            
+               totalVolume = totalVolume + Cells(j, 8).Value
+               
+            End If
+        
+            '5b) Find the starting price for the current ticker.
+            If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+                
+                startingPrice = Cells(j, 6).Value
+                
+            End If
+                           
+            '5c) Find the ending price for the current ticker.
+            If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+            
+                endingPrice = Cells(j, 6).Value
+                
+            End If
+            
+        Next j
+        
+    '6) Output the data for the current ticker.Worksheets("All Stocks Analysis").Activate
+    Worksheets("All Stocks Analysis").Activate
+    Cells(4 + i, 1).Value = ticker
+    Cells(4 + i, 2).Value = totalVolume
+    Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
+    
+    Next i
+```
 
 After refactoring, the VBA code used fewer variables and more arrays (see code below).
 ```
-For tickerIndex = 0 To 11
+    For tickerIndex = 0 To 11
         
         ticker = tickers(tickerIndex)
         Worksheets(yearValue).Activate
@@ -52,6 +92,16 @@ For tickerIndex = 0 To 11
         Next i
         
     Next tickerIndex
+    
+    'Challenge 4) Loop through arrays to output Ticker, Total Daily Volume and Return columns
+    Worksheets("All Stocks Analysis").Activate
+    For i = 0 To 11
+    
+        Cells(4 + i, 1).Value = tickers(i)
+        Cells(4 + i, 2).Value = tickerVolumes(i)
+        Cells(4 + i, 3).Value = (tickerEndingPrices(i) / tickerStartingPrices(i)) - 1
+    
+    Next i
 ```
 
 Also included in both versions of the analysis code was a timer to show how long it took to execute the code.  
