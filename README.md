@@ -1,4 +1,4 @@
-# Kickstarting with Excel
+# Stocks Analysis with VBA
 
 ## Overview of Project
 
@@ -14,19 +14,51 @@ In most cases, performance for the green energy stocks evaluated here was great 
 
 Pic – Stock Performance
 
-The VBA code used in the analysis macro initially focused on using loops and conditionals to save values to variables to output at the end (see picture below).
+The VBA code used in the analysis macro initially focused on using loops and conditionals to save values to variables to output at the end (see code below).
 
 Example Code 1
 
-After refactoring, the VBA code used fewer variables and more arrays (see picture below).
-
-Example Code 2
+After refactoring, the VBA code used fewer variables and more arrays (see code below).
+```
+For tickerIndex = 0 To 11
+        
+        ticker = tickers(tickerIndex)
+        Worksheets(yearValue).Activate
+        
+        'Challenge 2b) loop over all rows in sheet
+        For i = 2 To RowCount
+            
+            'Challenge 3a) Increase ticker volumes
+            If Cells(i, 1).Value = ticker Then
+                
+                tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+            
+            End If
+            
+            'Challenge 3b) Check if current row is first row with selected tickerIndex
+            If Cells(i - 1, 1).Value <> ticker And Cells(i, 1).Value = ticker Then
+                
+                tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+            
+            End If
+            
+            'Challenge 3c) Check if current row is last row with selected tickerIndex
+            If Cells(i + 1, 1).Value <> ticker And Cells(i, 1).Value = ticker Then
+            
+                tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+            
+            End If
+                              
+        Next i
+        
+    Next tickerIndex
+```
 
 Also included in both versions of the analysis code was a timer to show how long it took to execute the code.  
 
 Insert table with time screenshots.
 
-##Summary
+## Summary
 
 1.	What are the advantages or disadvantages of refactoring code?
 One advantage is refactored code takes less time to execute.  
