@@ -6,7 +6,7 @@ The scenario here is we have a friend, Steve, who recently graduated from colleg
 
 ### Purpose
 
-The purpose of this analysis was to help Steve do his due diligence by evaluating DAQO’s performance and comparing it against other green energy stocks.  We helped make Steve’s task easier by writing macros to automate some of his work.  We also refactored the code to make it run more efficiently.  The resulting refactored macro is named AllStocksAnalysis and is in the file VBA_Challenge.xlsm located here.
+The purpose of this analysis was to help Steve do his due diligence by evaluating DAQO’s performance and comparing it against other green energy stocks.  We helped make Steve’s task easier by writing macros to automate some of his work.  We also refactored the code to make it run more efficiently.  The resulting refactored macro is named AllStocksAnalysis and is in the file VBA_Challenge.xlsm located here [GitHub Pages](https://github.com/mshideler/Stocks-Analysis.git).
 
 ## Results
 
