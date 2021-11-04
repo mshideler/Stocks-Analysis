@@ -112,7 +112,7 @@ Also included in both versions of the analysis code was a timer to show how long
 
 ### VBA Challenge (Refactored Code)
 
-![VBA Challenge 2017(https://github.com/mshideler/Stocks-Analysis/blob/main/Resources/VBA_Challenge_2017.png)	![VBA Challenge 2018(https://github.com/mshideler/Stocks-Analysis/blob/main/Resources/VBA_Challenge_2018.png)
+![VBA Challenge 2017](https://github.com/mshideler/Stocks-Analysis/blob/main/Resources/VBA_Challenge_2017.png)	![VBA Challenge 2018](https://github.com/mshideler/Stocks-Analysis/blob/main/Resources/VBA_Challenge_2018.png)
 
 ## Summary
 
