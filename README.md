@@ -12,7 +12,7 @@ The purpose of this analysis was to help Steve do his due diligence by evaluatin
 
 In most cases, performance for the green energy stocks evaluated here was great in 2017 but bad in 2018, which shows how volatile these stocks are.  Below is the output from the macro we wrote.
 
-![Stock Performance](https://github.com/mshideler/Stocks-Analysis/tree/main/Resources/StockPeformance.png)
+![Stock Performance](https://github.com/mshideler/Stocks-Analysis/tree/main/Resources/StockPerformance.png)
 
 The VBA code used in the analysis macro initially focused on using loops and conditionals to save values to variables to output at the end (see code below).
 ```
